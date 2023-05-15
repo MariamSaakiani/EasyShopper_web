@@ -1,0 +1,16 @@
+.imgDiv{
+    margin: 7px; 
+    padding: 7px;
+    border-radius: 9px;
+    background-color: #cbece0;
+    cursor: pointer;
+}
+
+.imgsContainer {
+    display: flex; 
+    justify-content: center; 
+    flex-flow: row wrap;
+    height: 50vh; 
+    overflow-y: scroll; 
+    overflow-x: hidden;
+}

@@ -1,0 +1,19 @@
+.outerDiv {
+    padding: 1%;
+}
+
+.footer {
+    position: fixed; 
+    bottom: 0%; 
+    width: 100%; 
+    padding: 10px; 
+    text-align: center;
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.memberDiv {
+  cursor: pointer;
+  margin-left: 20px;
+}

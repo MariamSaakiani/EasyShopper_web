@@ -1,0 +1,27 @@
+<div id="container">
+    <div class="row" style="height: 200px;">
+        <div class="col-lg-6"> 
+            <img width="100%" alt=""
+            [src]="memberInfo.ImgPath"/>
+        </div>
+        <div class="col-lg-6" style="height: 70;">
+            <div class="Title">{{memberInfo.Name}}</div>
+            <div class="Title">{{memberInfo.Surname}}</div>
+            <div style="color: gray; font-style: italic;">{{memberInfo.Profession}}</div>
+            <mat-divider></mat-divider>&nbsp;
+            <div *ngFor="let i of memberInfo.Experiences">
+                <div>{{i}}</div>&nbsp;
+            </div>
+            <mat-divider></mat-divider>
+         </div>
+    </div>
+
+    <div class="phraseDiv">
+        {{memberInfo.Phrase}}
+    </div>
+    
+
+    <div style="float: right; margin-right: 2%;">
+        <button type="button" class="btn btn-light" (click)="close()">Close</button>
+    </div>
+</div>

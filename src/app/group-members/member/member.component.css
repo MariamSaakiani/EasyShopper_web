@@ -1,0 +1,41 @@
+:host{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0 , 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    margin-left: 10px; 
+    margin-top: 10px; 
+    border-style: ridge; 
+    border-radius: 10px;
+}
+
+.Title {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.phraseDiv{
+    height: 50px; 
+    font-size: 20px; 
+    font-weight: bold; 
+    font-size: 20px; 
+    margin-top: 200px; 
+    text-align: center;
+    font-family: fantasy;
+}
+
+#container{
+    width: 40%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 4px rgba(19, 19, 19, 0.2);
+  }

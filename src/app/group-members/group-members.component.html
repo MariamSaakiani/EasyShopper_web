@@ -1,0 +1,40 @@
+<div class="outerDiv" >
+
+    <div style="height: 3vh;"></div>
+    <div style="text-align: center;">You can see each member's background in details by clicking.</div>
+  <div class="row" style="text-align: center; padding: 1%;">
+    <div class="col-lg-2 border memberDiv" (click)="OnBtnClick(enum.Salome)">
+      <img width="180" alt="Salome" 
+      src="assets/Images/Salome.png"/>
+      <span><b>Salome Kikalishvili</b> (Computer Engineer)</span>
+    </div>
+
+    <div class="col-lg-2 border memberDiv" (click)="OnBtnClick(enum.Jorj)">
+        <img width="180" alt="Giorgi" 
+        src="assets/Images/Jorj.png"/>
+        <span><b>Giorgi Morchadze </b>(Electrical Engineer)</span>
+    </div>
+  
+    <div class="col-lg-2 border memberDiv" (click)="OnBtnClick(enum.Nini)">
+        <img width="180" alt="Nini" 
+      src="assets/Images/Nini.png"/>
+      <span><b>Nini Kristesiashvili</b> (Computer Engineer)</span>
+    </div>
+  
+    <div class="col-lg-2 border memberDiv" (click)="OnBtnClick(enum.Tamar)">
+        <img width="180" alt="Tamar"
+      src="assets/Images/Tamar.png"/>
+      <span><b>Tamar Shamugiani</b> (Computer Engineer)</span>
+    </div>
+  
+    <div class="col-lg-2 border memberDiv" (click)="OnBtnClick(enum.Mariam)">
+        <img width="180" alt="Mariam" 
+        src="assets/Images/Mariam.png"/>
+        <span><b>Mariam Saakiani</b>(Computer Engineer)</span>
+    </div>
+  
+    <div style="margin-top: 1%; font-size: 20px;;"><b>Mentor: Davit Chkhaidze</b></div>
+  </div>
+</div>
+
+<app-member *ngIf="service.showDialog" [memberInfo]="MemberInfo"></app-member>

@@ -1,0 +1,13 @@
+<div style="margin:1%;">
+    <div>Files</div>
+    <div class="imgsContainer">
+        <div *ngFor="let i of Images">
+            <div class="imgDiv">
+                <img width="200" alt="" (click)="openImage(i)"
+                [src]="i"/>
+            </div>
+        </div>      
+    </div>
+</div>
+
+<app-image-modal *ngIf="service.showImageDialog" [ImageInfo]="ImageClicked"></app-image-modal>

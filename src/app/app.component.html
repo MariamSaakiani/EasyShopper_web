@@ -1,0 +1,57 @@
+
+<!-- Header -->
+<div class="Header" style="height: 8vh;">
+  <img width="150" alt="Project Logo" class="margin-left: 6px;"
+      src="assets/Images/LogoTop.png"/>
+</div> 
+
+<div class="Body outerDiv" style="border-bottom: 1px solid rgb(184 180 180 / 28%);">
+  <div style="height: 10vh;"></div>
+  <div class="row">
+    <div class="col-lg-2 col-md-4 col-sm-6">
+      <a [ngClass]="{'green' : componentName == 'main', 'red': componentName !== 'main'}"  class="round-button" (click)="OnBtnClick('main')">Main</a>
+      </div>
+
+    <div class="col-lg-2 col-md-4 col-sm-6">
+    <a [ngClass]="{'green' : componentName == 'group-members', 'red': componentName !== 'group-members'}" (click)="OnBtnClick('group-members')" class="round-button">Group Members</a>
+    </div>
+  
+    <div class="col-lg-2 col-md-4 col-sm-6">
+    <a class="round-button" (click)="OnBtnClick('project-idea')" 
+       [ngClass]="{'green' : componentName == 'project-idea', 'red': componentName !== 'project-idea'}">Project Idea</a>
+    </div>
+  
+    <div class="col-lg-2 col-md-4 col-sm-6">
+    <a (click)="OnBtnClick('project-details')" [ngClass]="{'green' : componentName == 'project-details', 'red': componentName !== 'project-details'}" 
+       class="round-button">Project Details</a>
+    </div>
+  
+    <div class="col-lg-2 col-md-4 col-sm-6">
+    <a (click)="OnBtnClick('image-video')" class="round-button" 
+       [ngClass]="{'green' : componentName == 'image-video', 'red': componentName !== 'image-video'}">Image/Video</a>
+    </div>
+  
+    <div class="col-lg-2 col-md-4 col-sm-6">
+    <a (click)="OnBtnClick('final-project')"[ngClass]="{'green' : componentName == 'final-project', 'red': componentName !== 'final-project'}" 
+       class="round-button" (click)="OnBtnClick('final-project')">Final Project</a>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <ng-container [ngSwitch]="componentName">
+    <app-group-members *ngSwitchCase="'group-members'"></app-group-members>
+    <app-main *ngSwitchCase="'main'"></app-main>
+    <app-project-idea *ngSwitchCase="'project-idea'"></app-project-idea>
+    <app-project-details *ngSwitchCase="'project-details'"></app-project-details>
+    <app-image-video *ngSwitchCase="'image-video'"></app-image-video>
+    <app-final-project *ngSwitchCase="'final-project'"></app-final-project>
+  </ng-container>
+
+  <!-- footer -->
+  <div class="Footer footer">
+    2023 by SDSU Georgia students
+  </div>
+  
